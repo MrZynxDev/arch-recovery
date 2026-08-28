@@ -1,0 +1,9 @@
+# Recreate enablement with systemctl; do not copy enablement symlinks.
+bluetooth.service
+cups.service
+docker.service
+iwd.service
+sddm.service
+systemd-networkd.service
+systemd-resolved.service
+systemd-timesyncd.service

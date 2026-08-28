@@ -1,0 +1,19 @@
+[global]
+    frame_color = "#d0d07b"
+    separator_color = "frame"
+    highlight = "#d0d07b"
+
+[urgency_low]
+    background = "#14140c"
+    foreground = "#cfccbb"
+    frame_color = "#7e7c6d"
+
+[urgency_normal]
+    background = "#26261d"
+    foreground = "#fffbf1"
+    frame_color = "#d0d07b"
+
+[urgency_critical]
+    background = "#ff5449"
+    foreground = "#000000"
+    frame_color = "#ffbbb3"

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+PIDFILE="/tmp/autoclicker-$USER.pid"
+
+if [[ -f "$PIDFILE" ]]; then
+    PID=$(cat "$PIDFILE")
+
+    if kill -0 "$PID" 2>/dev/null; then
+        kill "$PID"
+    fi
+
+    rm -f "$PIDFILE"
+    exit 0
+fi
+
+(
+    trap 'rm -f "$PIDFILE"' EXIT
+
+    while true; do
+        ydotool click 0xC0
+        sleep 0.060
+    done
+) &
+
+echo $! > "$PIDFILE"

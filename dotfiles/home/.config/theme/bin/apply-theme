@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+state="$HOME/.config/theme/current-wallpaper"
+applied="$HOME/.cache/dynamic-theme/applied-wallpaper"
+lock="$HOME/.cache/dynamic-theme/apply.lock"
+
+mkdir -p "${applied%/*}"
+exec 9>"$lock"
+flock 9
+
+[[ -r "$state" ]] || exit 0
+wallpaper=$(<"$state")
+[[ -f "$wallpaper" ]] || { printf 'Wallpaper not found: %s\n' "$wallpaper" >&2; exit 1; }
+
+if [[ -r "$applied" ]] && [[ $(<"$applied") == "$wallpaper" ]] && [[ -s "$HOME/.config/waybar/colors.css" ]]; then
+    awww img --transition-type fade --transition-duration 1.2 --transition-fps 60 "$wallpaper"
+    exit 0
+fi
+
+matugen image --mode dark --type scheme-tonal-spot --contrast 0.35 --source-color-index 0 "$wallpaper"
+awww img --transition-type fade --transition-duration 1.2 --transition-fps 60 "$wallpaper"
+printf '%s\n' "$wallpaper" >"$applied.tmp"
+mv "$applied.tmp" "$applied"

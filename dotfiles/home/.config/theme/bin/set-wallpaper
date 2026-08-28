@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+[[ $# -eq 1 ]] || { printf 'Usage: %s IMAGE\n' "${0##*/}" >&2; exit 2; }
+wallpaper=$(realpath -- "$1")
+[[ -f "$wallpaper" ]] || { printf 'Wallpaper not found: %s\n' "$wallpaper" >&2; exit 1; }
+
+state="$HOME/.config/theme/current-wallpaper"
+printf '%s\n' "$wallpaper" >"$state.tmp"
+mv "$state.tmp" "$state"
+"$HOME/.config/theme/bin/apply-theme"

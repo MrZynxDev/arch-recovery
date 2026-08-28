@@ -1,0 +1,53 @@
+[config]
+version_check = false
+fallback_color = "#7aa2f7"
+prefer = "saturation"
+caching = true
+contrast = 0.35
+source_color_index = 0
+
+[templates.hypr]
+input_path = "~/.config/matugen/templates/hyprland-colors.lua"
+output_path = "~/.config/hypr/colors.lua"
+
+[templates.hyprlock]
+input_path = "~/.config/matugen/templates/hyprlock-colors.conf"
+output_path = "~/.config/hypr/hyprlock-colors.conf"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar-colors.css"
+output_path = "~/.config/waybar/colors.css"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/colors.conf"
+
+[templates.fuzzel]
+input_path = "~/.config/matugen/templates/fuzzel-colors.ini"
+output_path = "~/.config/fuzzel/fuzzel.ini"
+
+[templates.wofi]
+input_path = "~/.config/matugen/templates/wofi-colors.css"
+output_path = "~/.config/wofi/style.css"
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk-colors.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk-colors.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.qt6ct]
+input_path = "~/.config/matugen/templates/qt6ct-colors.conf"
+output_path = "~/.config/qt6ct/style-colors.conf"
+
+[templates.dunst]
+input_path = "~/.config/matugen/templates/dunst-colors.conf"
+output_path = "~/.config/dunst/dunstrc"
+
+[templates.fastfetch]
+input_path = "~/.config/matugen/templates/fastfetch.jsonc"
+output_path = "~/.config/fastfetch/config.jsonc"
+index = 100
+post_hook = "~/.config/theme/bin/reload-theme"

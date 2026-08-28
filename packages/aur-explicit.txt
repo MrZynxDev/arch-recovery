@@ -1,0 +1,6 @@
+localsend-bin
+omniclicker
+ttf-tajawal
+ventoy-bin
+visual-studio-code-bin
+yay

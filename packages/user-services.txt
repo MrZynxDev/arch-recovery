@@ -1,0 +1,3 @@
+dynamic-theme.path
+dynamic-theme-watch.service
+syncthing.service

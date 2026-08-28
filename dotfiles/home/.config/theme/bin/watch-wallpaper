@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -u
+
+state="$HOME/.config/theme/current-wallpaper"
+
+while sleep 2; do
+    query=$(awww query 2>/dev/null) || continue
+    wallpaper=
+
+    while IFS= read -r line; do
+        case "$line" in
+            *"currently displaying: image: "*)
+                wallpaper=${line#*currently displaying: image: }
+                break
+                ;;
+        esac
+    done <<<"$query"
+
+    [[ -n "$wallpaper" && -f "$wallpaper" ]] || continue
+    [[ -r "$state" ]] && [[ $(<"$state") == "$wallpaper" ]] && continue
+    "$HOME/.config/theme/bin/set-wallpaper" "$wallpaper" || true
+done

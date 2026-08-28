@@ -1,0 +1,14 @@
+window {
+  background-color: alpha(#14140c, 0.94);
+  color: #fffbf1;
+}
+#input {
+  background-color: #313027;
+  color: #fffbf1;
+  border: 2px solid #d0d07b;
+}
+#entry:selected {
+  background-color: #959446;
+  color: #000000;
+}
+#text:selected { color: #000000; }

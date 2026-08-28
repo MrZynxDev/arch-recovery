@@ -1,0 +1,4 @@
+# Preserve upstream theme assets and verbatim system snapshots.
+assets/icons/** -whitespace
+system-reference/etc/locale.gen -whitespace
+system-reference/sddm-themes/** -whitespace

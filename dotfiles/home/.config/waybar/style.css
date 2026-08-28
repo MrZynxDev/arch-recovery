@@ -1,0 +1,76 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+window#waybar {
+    background: alpha(@background, 0.55);
+    border-radius: 0px;
+    border-bottom: 2px solid @outline;
+    color: @foreground;
+}
+
+#clock,
+#workspaces,
+#cpu,
+#backlight,
+#battery {
+    padding: 0 10px;
+    color: @muted;
+}
+
+#custom-prayer {
+    padding: 0 12px;
+    margin: 3px 0;
+    border-radius: 8px;
+    background: alpha(@primary, 0.10);
+    color: @foreground;
+    font-weight: 600;
+}
+
+#custom-prayer.prayer-error {
+    color: @error;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 2px 8px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    background: transparent;
+    color: @muted;
+    min-width: 20px;
+}
+
+#workspaces button.active {
+    background: alpha(@primary, 0.20);
+    color: @primary;
+    border-radius: 8px;
+}
+
+#workspaces button:hover {
+    background: alpha(@primary, 0.10);
+}
+
+/* Right modules */
+#cpu,
+#backlight,
+#battery {
+    margin: 0 2px;
+}
+
+#battery.warning {
+    color: @warning;
+}
+
+#battery.critical {
+    color: @error;
+}
+
+#clock {
+    font-weight: 500;
+}

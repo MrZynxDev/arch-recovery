@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -u
+
+command -v gsettings >/dev/null && {
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+}
+
+command -v hyprctl >/dev/null && hyprctl reload >/dev/null 2>&1 || true
+pkill -USR2 waybar 2>/dev/null || true
+pkill -USR1 kitty 2>/dev/null || true
+command -v dunstctl >/dev/null && dunstctl reload "$HOME/.config/dunst/dunstrc" >/dev/null 2>&1 || true

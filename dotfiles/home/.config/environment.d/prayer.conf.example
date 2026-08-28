@@ -1,0 +1,3 @@
+# Copy this file to prayer.conf and set your location before starting Waybar.
+WAYBAR_PRAYER_LATITUDE=
+WAYBAR_PRAYER_LONGITUDE=

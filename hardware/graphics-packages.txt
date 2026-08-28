@@ -1,0 +1,13 @@
+linux 7.1.8.arch1-3
+linux-firmware 20260810-2
+intel-media-driver 26.2.4-1
+intel-ucode 20260812-1
+libva-intel-driver 2.4.5-1
+sof-firmware 2025.12.2-1
+vulkan-intel 1:26.1.7-1
+vulkan-nouveau 1:26.1.7-1
+vulkan-radeon 1:26.1.7-1
+vulkan-tools 1.4.357.0-1
+xf86-video-amdgpu 25.0.0-1
+xf86-video-ati 1:22.0.0-3
+xf86-video-nouveau 1.0.18-1

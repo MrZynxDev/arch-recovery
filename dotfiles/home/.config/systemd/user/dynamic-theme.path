@@ -1,0 +1,9 @@
+[Unit]
+Description=Watch for wallpaper theme changes
+
+[Path]
+PathChanged=%h/.config/theme/current-wallpaper
+Unit=dynamic-theme.service
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,16 @@
+{
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+    "chat.titleBar.signIn.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "workbench.browser.showInTitleBar": false,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Bearded Theme Arc Blueberry",
+    "workbench.iconTheme": "vscode-icons",
+    "continue.enableTabAutocomplete": false,
+    "claudeCode.preferredLocation": "panel",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PIDFILE="/tmp/rightclick-$USER.pid"
+
+if [[ -f "$PIDFILE" ]] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
+    exit 0
+fi
+
+(
+    while true; do
+        ydotool click 0xC1
+        sleep 0.060
+    done
+) &
+
+echo $! > "$PIDFILE"

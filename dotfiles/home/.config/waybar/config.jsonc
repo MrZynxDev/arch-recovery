@@ -1,0 +1,56 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["clock", "hyprland/workspaces"],
+    "modules-center": ["custom/prayer"],
+    "modules-right": ["cpu", "backlight", "battery"],
+
+    "clock": {
+        "format": "  {:%I:%M %p}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": [1]
+        }
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 5,
+        "tooltip": true
+    },
+
+    "backlight": {
+        "format": " {percent}%",
+        "on-scroll-up": "brightnessctl set 2%+",
+        "on-scroll-down": "brightnessctl set 2%-"
+    },
+
+    "custom/prayer": {
+        "exec": "~/.config/waybar/prayer.py",
+        "return-type": "json",
+        "restart-interval": 5,
+        "tooltip": true
+    },
+
+    "battery": {
+        "format": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    }
+}

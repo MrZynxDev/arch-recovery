@@ -1,0 +1,10 @@
+NAME        FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+zram0       swap   1     zram0 <UUID_REDACTED>                [SWAP]
+nvme0n1
+├─nvme0n1p1 vfat   FAT32       <UUID_REDACTED>                             910.1M    11% /boot
+├─nvme0n1p2 btrfs              <UUID_REDACTED>    249G     8% /var/log
+│                                                                                  /var/cache/pacman/pkg
+│                                                                                  /home
+│                                                                                  /
+├─nvme0n1p3
+└─nvme0n1p4 ntfs               7480F45480F41E74

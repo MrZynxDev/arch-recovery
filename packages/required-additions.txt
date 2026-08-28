@@ -1,0 +1,7 @@
+# Referenced by the backed-up desktop configuration but not explicitly installed.
+brightnessctl
+playerctl
+python
+qt6ct
+rsync
+ttf-font-awesome
